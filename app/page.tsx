@@ -8,10 +8,10 @@ import Link from "next/link"
 
 export default function HomePage() {
   const [showQR, setShowQR] = useState(false)
-  
+
   // QR kod URL'i - gerçek domain'inizle değiştirin
   const surveyUrl = `${typeof window !== 'undefined' ? window.location.origin : ''}/survey`
-  const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent(surveyUrl)}`
+  const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=${encodeURIComponent(surveyUrl)}&bgcolor=f0f9ff&color=1e40af&qzone=2`
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-4">
@@ -44,9 +44,9 @@ export default function HomePage() {
               ) : (
                 <div className="space-y-4">
                   <div className="bg-white p-4 rounded-lg inline-block shadow-sm">
-                    <img 
-                      src={qrCodeUrl || "/placeholder.svg"} 
-                      alt="Anket QR Kodu" 
+                    <img
+                      src={qrCodeUrl || "/placeholder.svg"}
+                      alt="Anket QR Kodu"
                       className="w-64 h-64 mx-auto"
                     />
                   </div>
