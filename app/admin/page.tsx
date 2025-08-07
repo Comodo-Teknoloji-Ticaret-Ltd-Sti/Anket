@@ -401,13 +401,13 @@ export default function AdminPage() {
         </div>
 
         <Tabs defaultValue="overview" className="space-y-4">
-          <TabsList className="grid w-full grid-cols-6">
-            <TabsTrigger value="overview">Genel Bakış</TabsTrigger>
-            <TabsTrigger value="departments">Departmanlar</TabsTrigger>
-            <TabsTrigger value="improvements">Gelişim Alanları</TabsTrigger>
-            <TabsTrigger value="critical">Kritik Durumlar</TabsTrigger>
-            <TabsTrigger value="surveys">Anketler</TabsTrigger>
-            <TabsTrigger value="actions">Aksiyon Planı</TabsTrigger>
+          <TabsList className="grid w-full grid-cols-3 md:grid-cols-6 gap-1">
+            <TabsTrigger value="overview" className="text-xs">Genel</TabsTrigger>
+            <TabsTrigger value="departments" className="text-xs">Departman</TabsTrigger>
+            <TabsTrigger value="improvements" className="text-xs">Gelişim</TabsTrigger>
+            <TabsTrigger value="critical" className="text-xs">Kritik</TabsTrigger>
+            <TabsTrigger value="surveys" className="text-xs">Anket</TabsTrigger>
+            <TabsTrigger value="actions" className="text-xs">Aksiyon</TabsTrigger>
           </TabsList>
 
           <TabsContent value="overview">

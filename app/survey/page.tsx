@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -152,6 +152,17 @@ export default function SurveyPage() {
   )
 
   if (isSubmitted) {
+    // 5 saniye sonra sayfayı kapat
+    useEffect(() => {
+      const timer = setTimeout(() => {
+        if (typeof window !== 'undefined') {
+          window.close();
+        }
+      }, 5000);
+      
+      return () => clearTimeout(timer);
+    }, []);
+
     return (
       <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50 p-4 flex items-center justify-center">
         <Card className="w-full max-w-md text-center">
@@ -164,12 +175,11 @@ export default function SurveyPage() {
             </p>
             <div className="bg-blue-50 p-4 rounded-lg mb-6">
               <p className="text-sm text-blue-800">
-                Ankete katıldığınız için teşekkürler. Görüşleriniz doğrultusunda 
-                hizmetlerimizi sürekli geliştirmeye devam ediyoruz.
+                Ankete katıldığınız için teşekkürler. Bu sayfa 5 saniye içinde otomatik olarak kapanacak.
               </p>
             </div>
-            <Button onClick={() => window.location.href = "/"} className="w-full">
-              Ana Sayfaya Dön
+            <Button onClick={() => window.close()} className="w-full">
+              Sayfayı Kapat
             </Button>
           </CardContent>
         </Card>
