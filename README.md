@@ -1,13 +1,13 @@
-# Otel Müşteri Memnuniyet Anketi Sistemi
+# Anket Değerlendirme Sistemi
 
-Bu proje, oteller için QR kod tabanlı müşteri memnuniyet anketi sistemidir.
+Otel müşteri memnuniyet anketi sistemi.
+
+## Demo
+[🔗 Canlı Demo](https://comodo-teknoloji-ticaret-ltd-sti.github.io/Anket/)
 
 ## Özellikler
-
-- 📱 QR kod ile kolay erişim
-- 📋 Kapsamlı 6 aşamalı anket
-- 📊 Detaylı analiz ve raporlama
-- 🎯 Gelişim alanları analizi
-- 📈 Departman performans takibi
+- QR kod ile kolay erişim
+- 6 aşamalı detaylı anket
+- Modern responsive tasarım
 
 
