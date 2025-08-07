@@ -9,8 +9,8 @@ import Link from "next/link"
 export default function HomePage() {
   const [showQR, setShowQR] = useState(false)
 
-  // QR kod URL'i - gerçek domain'inizle değiştirin
-  const surveyUrl = `${typeof window !== 'undefined' ? window.location.origin : ''}/survey`
+  // QR kod URL'i - GitHub Pages URL'si
+  const surveyUrl = `https://comodo-teknoloji-ticaret-ltd-sti.github.io/Anket/survey`
   const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=${encodeURIComponent(surveyUrl)}&bgcolor=f0f9ff&color=1e40af&qzone=2`
 
   return (
